@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hiring Process Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0f1117;
+      --surface:   #1a1d27;
+      --border:    #2a2d3a;
+      --accent1:   #6c63ff;
+      --accent2:   #00d4aa;
+      --accent3:   #ff6b6b;
+      --accent4:   #ffd166;
+      --accent5:   #06b6d4;
+      --accent6:   #a78bfa;
+      --text:      #e8eaf0;
+      --muted:     #8b8fa8;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      padding: 48px 20px 64px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    header .eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 14px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      background: linear-gradient(135deg, #fff 30%, var(--accent1));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    header p {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 26px 26px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--card-accent);
+      border-radius: 16px 16px 0 0;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      background: color-mix(in srgb, var(--card-accent) 15%, transparent);
+      flex-shrink: 0;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.2px;
+    }
+
+    .card-step {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--card-accent);
+      margin-top: 2px;
+    }
+
+    ul.points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    ul.points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    ul.points li .bullet-icon {
+      flex-shrink: 0;
+      margin-top: 1px;
+      font-size: 15px;
+    }
+
+    /* Per-card accent colours */
+    .card-1 { --card-accent: var(--accent1); }
+    .card-2 { --card-accent: var(--accent2); }
+    .card-3 { --card-accent: var(--accent3); }
+    .card-4 { --card-accent: var(--accent4); }
+    .card-5 { --card-accent: var(--accent5); }
+    .card-6 { --card-accent: var(--accent6); }
+
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="eyebrow">Talent Acquisition</div>
+    <h1>The Hiring Process</h1>
+    <p>A step-by-step guide to finding, evaluating, and onboarding the right candidate.</p>
+  </header>
+
+  <div class="grid">
+
+    <!-- 1. Job Advertisement -->
+    <div class="card card-1">
+      <div class="card-header">
+        <div class="icon-wrap">📢</div>
+        <div>
+          <div class="card-title">Job Advertisement</div>
+          <div class="card-step">Step 01</div>
+        </div>
+      </div>
+      <ul class="points">
+        <li><span class="bullet-icon">✏️</span> Write a clear job title and concise role summary that reflects the actual day-to-day responsibilities.</li>
+        <li><span class="bullet-icon">📋</span> List required qualifications, skills, and experience so candidates can self-screen effectively.</li>
+        <li><span class="bullet-icon">🌐</span> Post the role across job boards, LinkedIn, and your company's careers page for maximum reach.</li>
+        <li><span class="bullet-icon">💰</span> Include salary range and benefits to attract serious applicants and build trust from the start.</li>
+      </ul>
+    </div>
+
+    <!-- 2. Resume Screening -->
+    <div class="card card-2">
+      <div class="card-header">
+        <div class="icon-wrap">🔍</div>
+        <div>
+          <div class="card-title">Resume Screening</div>
+          <div class="card-step">Step 02</div>
+        </div>
+      </div>
+      <ul class="points">
+        <li><span class="bullet-icon">📄</span> Review applications against must-have criteria to create a focused shortlist quickly.</li>
+        <li><span class="bullet-icon">🏷️</span> Look for relevant keywords, measurable achievements, and career progression patterns.</li>
+        <li><span class="bullet-icon">⚖️</span> Use a consistent scoring rubric to keep evaluation objective and free from bias.</li>
+        <li><span class="bullet-icon">📬</span> Send timely acknowledgements to all applicants, including those not moving forward.</li>
+      </ul>
+    </div>
+
+    <!-- 3. Interviews -->
+    <div class="card card-3">
+      <div class="card-header">
+        <div class="icon-wrap">🎙️</div>
+        <div>
+          <div class="card-title">Interviews</div>
+          <div class="card-step">Step 03</div>
+        </div>
+      </div>
+      <ul class="points">
+        <li><span class="bullet-icon">📞</span> Begin with a brief phone screen to confirm availability, expectations, and communication style.</li>
+        <li><span class="bullet-icon">🧠</span> Use structured behavioural questions (STAR format) to assess past experience consistently.</li>
+        <li><span class="bullet-icon">🤝</span> Include a panel interview so multiple team members can evaluate cultural and role fit.</li>
+        <li><span class="bullet-icon">❓</span> Allow candidates time to ask questions — their curiosity reveals motivation and preparation.</li>
+      </ul>
+    </div>
+
+    <!-- 4. Assessment Tests -->
+    <div class="card card-4">
+      <div class="card-header">
+        <div class="icon-wrap">🧪</div>
+        <div>
+          <div class="card-title">Assessment Tests</div>
+          <div class="card-step">Step 04</div>
+        </div>
+      </div>
+      <ul class="points">
+        <li><span class="bullet-icon">💻</span> Assign a practical task or case study that mirrors real work the candidate would handle.</li>
+        <li><span class="bullet-icon">🧩</span> Use aptitude or psychometric tests to assess problem-solving and cognitive ability objectively.</li>
+        <li><span class="bullet-icon">⏱️</span> Keep assessments reasonable in length — respect the candidate's time to maintain goodwill.</li>
+        <li><span class="bullet-icon">📊</span> Evaluate submissions with a predefined rubric shared across all reviewers for consistency.</li>
+      </ul>
+    </div>
+
+    <!-- 5. Final Selection -->
+    <div class="card card-5">
+      <div class="card-header">
+        <div class="icon-wrap">🏆</div>
+        <div>
+          <div class="card-title">Final Selection</div>
+          <div class="card-step">Step 05</div>
+        </div>
+      </div>
+      <ul class="points">
+        <li><span class="bullet-icon">🗂️</span> Compile interview scores, assessment results, and reference checks into a single summary.</li>
+        <li><span class="bullet-icon">👥</span> Hold a debrief with the hiring team to discuss top candidates and surface any concerns.</li>
+        <li><span class="bullet-icon">📞</span> Conduct reference checks to validate experience and gain third-party perspective on the candidate.</li>
+        <li><span class="bullet-icon">✅</span> Make the final decision based on data, team input, and alignment with role requirements.</li>
+      </ul>
+    </div>
+
+    <!-- 6. Job Offer -->
+    <div class="card card-6">
+      <div class="card-header">
+        <div class="icon-wrap">🎉</div>
+        <div>
+          <div class="card-title">Job Offer</div>
+          <div class="card-step">Step 06</div>
+        </div>
+      </div>
+      <ul class="points">
+        <li><span class="bullet-icon">📩</span> Extend a verbal offer first to gauge interest and discuss any questions before formalising.</li>
+        <li><span class="bullet-icon">📝</span> Send a written offer letter with salary, start date, benefits, and key terms clearly outlined.</li>
+        <li><span class="bullet-icon">🔄</span> Be open to negotiation on compensation or start date within approved boundaries.</li>
+        <li><span class="bullet-icon">🚀</span> Once accepted, share onboarding details promptly to keep the candidate engaged before day one.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>
